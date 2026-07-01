@@ -93,7 +93,6 @@ const InvoiceSenderSchema = z.object({
     city: fieldValidators.city,
     country: fieldValidators.country,
     email: fieldValidators.email,
-    phone: fieldValidators.phone,
     customInputs: z.array(CustomInputSchema).optional(),
 });
 
@@ -104,7 +103,6 @@ const InvoiceReceiverSchema = z.object({
     city: fieldValidators.city,
     country: fieldValidators.country,
     email: fieldValidators.email,
-    phone: fieldValidators.phone,
     customInputs: z.array(CustomInputSchema).optional(),
 });
 
