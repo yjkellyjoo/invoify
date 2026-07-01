@@ -1,5 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
+
+// RHF
+import { useFormContext, useWatch } from "react-hook-form";
+
 // Components
 import {
     CurrencySelector,
@@ -15,6 +20,23 @@ import { useTranslationContext } from "@/contexts/TranslationContext";
 
 const InvoiceDetails = () => {
     const { _t } = useTranslationContext();
+
+    // Untyped like DatePickerFormField: the schema transforms dates to strings
+    // at validation time, but the form holds Date objects at runtime.
+    const { control, setValue } = useFormContext();
+
+    const invoiceDate = useWatch({ name: "details.invoiceDate", control });
+    const dueDate = useWatch({ name: "details.dueDate", control });
+
+    // Auto-fill the due date to invoice date + 30 days, but only when the user
+    // has not set a due date yet (non-destructive to manual edits).
+    useEffect(() => {
+        if (invoiceDate && !dueDate) {
+            const due = new Date(invoiceDate);
+            due.setDate(due.getDate() + 30);
+            setValue("details.dueDate", due);
+        }
+    }, [invoiceDate, dueDate, setValue]);
 
     return (
         <section className="flex flex-col flex-wrap gap-5">
