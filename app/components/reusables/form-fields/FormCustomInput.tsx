@@ -15,8 +15,8 @@ const FormCustomInput = ({
     location,
     removeField,
 }: FormCustomInputProps) => {
-    const nameKey = `${location}[${index}].key`;
-    const nameValue = `${location}[${index}].value`;
+    const nameKey = `${location}.${index}.key`;
+    const nameValue = `${location}.${index}.value`;
     return (
         <>
             <div className="flex items-center gap-2">

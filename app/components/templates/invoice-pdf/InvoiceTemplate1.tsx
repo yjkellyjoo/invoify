@@ -40,6 +40,14 @@ const InvoiceTemplate = (data: InvoiceType) => {
 						{sender.country}
 						<br />
 					</address>
+					{sender.customInputs?.map((input, index) =>
+						input.key || input.value ? (
+							<p key={index} className='text-gray-500'>
+								<span className='font-semibold text-gray-800'>{input.key}:</span>{" "}
+								{input.value}
+							</p>
+						) : null
+					)}
 				</div>
 			</div>
 
@@ -55,6 +63,14 @@ const InvoiceTemplate = (data: InvoiceType) => {
 						{receiver.city}, {receiver.country}
 						<br />
 					</address>
+					{receiver.customInputs?.map((input, index) =>
+						input.key || input.value ? (
+							<p key={index} className='mt-2 text-gray-500'>
+								<span className='font-semibold text-gray-800'>{input.key}:</span>{" "}
+								{input.value}
+							</p>
+						) : null
+					)}
 				</div>
 				<div className='sm:text-right space-y-2'>
 					<div className='grid grid-cols-2 sm:grid-cols-1 gap-3 sm:gap-2'>
