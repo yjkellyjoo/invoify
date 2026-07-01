@@ -53,7 +53,12 @@
                 "heading": "Información de pago",
                 "bankName": "Nombre del banco",
                 "accountName": "Nombre de la cuenta",
-                "accountNumber": "Número de la cuenta"
+                "accountNumber": "Número de la cuenta",
+                "bank": "Bank",
+                "crypto": "Crypto",
+                "network": "Network",
+                "walletAddress": "Wallet Address",
+                "asset": "Asset"
             },
             "summary": {
                 "heading": "Sumario",

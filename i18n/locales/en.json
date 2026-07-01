@@ -51,9 +51,14 @@
             },
             "paymentInfo": {
                 "heading": "Payment Information",
+                "bank": "Bank",
+                "crypto": "Crypto",
                 "bankName": "Bank Name",
                 "accountName": "Account Name",
-                "accountNumber": "Account Number"
+                "accountNumber": "Account Number",
+                "network": "Network",
+                "walletAddress": "Wallet Address",
+                "asset": "Asset"
             },
             "summary": {
                 "heading": "Summary",

@@ -53,7 +53,12 @@
                 "heading": "支付信息",
                 "bankName": "银行名称",
                 "accountName": "账户名",
-                "accountNumber": "账号"
+                "accountNumber": "账号",
+                "bank": "Bank",
+                "crypto": "Crypto",
+                "network": "Network",
+                "walletAddress": "Wallet Address",
+                "asset": "Asset"
             },
             "summary": {
                 "heading": "摘要",

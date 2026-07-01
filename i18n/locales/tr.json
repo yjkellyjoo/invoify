@@ -53,7 +53,12 @@
         "heading": "Ödeme Bilgileri",
         "bankName": "Banka Adı",
         "accountName": "Hesap Adı",
-        "accountNumber": "Hesap Numarası"
+        "accountNumber": "Hesap Numarası",
+        "bank": "Bank",
+        "crypto": "Crypto",
+        "network": "Network",
+        "walletAddress": "Wallet Address",
+        "asset": "Asset"
       },
       "summary": {
         "heading": "Özet",

@@ -53,7 +53,12 @@
                 "heading": "Betalingsinformasjon",
                 "bankName": "Banknavn",
                 "accountName": "Kontonavn",
-                "accountNumber": "Kontonummer"
+                "accountNumber": "Kontonummer",
+                "bank": "Bank",
+                "crypto": "Crypto",
+                "network": "Network",
+                "walletAddress": "Wallet Address",
+                "asset": "Asset"
             },
             "summary": {
                 "heading": "Sammendrag",

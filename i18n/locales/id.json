@@ -53,7 +53,12 @@
         "heading": "Informasi Pembayaran",
         "bankName": "Nama Bank",
         "accountName": "Nama Rekening",
-        "accountNumber": "Nomor Rekening"
+        "accountNumber": "Nomor Rekening",
+        "bank": "Bank",
+        "crypto": "Crypto",
+        "network": "Network",
+        "walletAddress": "Wallet Address",
+        "asset": "Asset"
       },
       "summary": {
         "heading": "Ringkasan",

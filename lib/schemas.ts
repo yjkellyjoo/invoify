@@ -117,9 +117,17 @@ const ItemSchema = z.object({
 });
 
 const PaymentInformationSchema = z.object({
-    bankName: fieldValidators.stringMin1,
-    accountName: fieldValidators.stringMin1,
-    accountNumber: fieldValidators.stringMin1,
+    // Which payment method these details describe. Only the fields for the
+    // selected type are shown in the form / rendered on the invoice.
+    paymentType: z.enum(["bank", "crypto"]).default("bank"),
+    // Bank fields
+    bankName: fieldValidators.stringOptional,
+    accountName: fieldValidators.stringOptional,
+    accountNumber: fieldValidators.stringOptional,
+    // Crypto fields
+    network: fieldValidators.stringOptional,
+    walletAddress: fieldValidators.stringOptional,
+    asset: fieldValidators.stringOptional,
 });
 
 const DiscountDetailsSchema = z.object({

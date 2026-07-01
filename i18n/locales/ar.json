@@ -53,7 +53,12 @@
         "heading": "معلومات الدفع",
         "bankName": "اسم البنك",
         "accountName": "اسم الحساب",
-        "accountNumber": "رقم الحساب"
+        "accountNumber": "رقم الحساب",
+        "bank": "Bank",
+        "crypto": "Crypto",
+        "network": "Network",
+        "walletAddress": "Wallet Address",
+        "asset": "Asset"
       },
       "summary": {
         "heading": "الملخص",

@@ -53,7 +53,12 @@
                 "heading": "Informacije o plaćanju",
                 "bankName": "Ime Banke",
                 "accountName": "Naziv naloga",
-                "accountNumber": "Broj računa"
+                "accountNumber": "Broj računa",
+                "bank": "Bank",
+                "crypto": "Crypto",
+                "network": "Network",
+                "walletAddress": "Wallet Address",
+                "asset": "Asset"
             },
             "summary": {
                 "heading": "Rezime",

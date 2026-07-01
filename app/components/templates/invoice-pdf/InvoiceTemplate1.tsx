@@ -183,9 +183,19 @@ const InvoiceTemplate = (data: InvoiceType) => {
 					<div className='my-2'>
 						<span className='font-semibold text-md text-gray-800'>
 							Please send the payment to this address
-							<p className='text-sm'>Bank: {details.paymentInformation?.bankName}</p>
-							<p className='text-sm'>Account name: {details.paymentInformation?.accountName}</p>
-							<p className='text-sm'>Account no: {details.paymentInformation?.accountNumber}</p>
+							{details.paymentInformation?.paymentType === "crypto" ? (
+								<>
+									<p className='text-sm'>Network: {details.paymentInformation?.network}</p>
+									<p className='text-sm'>Wallet address: {details.paymentInformation?.walletAddress}</p>
+									<p className='text-sm'>Asset: {details.paymentInformation?.asset}</p>
+								</>
+							) : (
+								<>
+									<p className='text-sm'>Bank: {details.paymentInformation?.bankName}</p>
+									<p className='text-sm'>Account name: {details.paymentInformation?.accountName}</p>
+									<p className='text-sm'>Account no: {details.paymentInformation?.accountNumber}</p>
+								</>
+							)}
 						</span>
 					</div>
 				</div>

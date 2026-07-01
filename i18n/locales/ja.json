@@ -53,7 +53,12 @@
                 "heading": "支払い情報",
                 "bankName": "銀行名",
                 "accountName": "口座名義",
-                "accountNumber": "口座番号"
+                "accountNumber": "口座番号",
+                "bank": "Bank",
+                "crypto": "Crypto",
+                "network": "Network",
+                "walletAddress": "Wallet Address",
+                "asset": "Asset"
             },
             "summary": {
                 "heading": "概要",
