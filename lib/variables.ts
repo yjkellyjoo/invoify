@@ -1,6 +1,11 @@
 // Types
 import { SignatureColor, SignatureFont } from "@/types";
 
+// DEV-only autofill data. Resolves to the personal, gitignored
+// `fill-values.local.json` when present, else the committed
+// `fill-values.local.example.json` (see the alias in next.config.js).
+import FILL_VALUES from "@fill-values";
+
 /**
  * Environment
  */
@@ -182,85 +187,15 @@ export const FORM_DEFAULT_VALUES = {
 
 /**
  * ? DEV Only
- * Form auto fill values for testing
+ * Form auto fill values for testing.
+ * Content comes from `fill-values.local.json` (personal, gitignored); the
+ * invoice/due dates are injected at runtime so they're always current.
  */
 export const FORM_FILL_VALUES = {
-  sender: {
-    name: "John Doe",
-    address: "123 Main St",
-    zipCode: "12345",
-    city: "Anytown",
-    country: "USA",
-    email: "johndoe@example.com",
-  },
-  receiver: {
-    name: "Jane Smith",
-    address: "456 Elm St",
-    zipCode: "54321",
-    city: "Other Town",
-    country: "Canada",
-    email: "janesmith@example.com",
-  },
+  ...FILL_VALUES,
   details: {
-    invoiceLogo: "",
-    invoiceNumber: "INV0001",
+    ...FILL_VALUES.details,
     invoiceDate: new Date(),
     dueDate: new Date(),
-    items: [
-      {
-        name: "Product 1",
-        description: "Description of Product 1",
-        quantity: 4,
-        unitPrice: 50,
-        total: 200,
-      },
-      {
-        name: "Product 2",
-        description: "Description of Product 2",
-        quantity: 5,
-        unitPrice: 50,
-        total: 250,
-      },
-      {
-        name: "Product 3",
-        description: "Description of Product 3",
-        quantity: 5,
-        unitPrice: 80,
-        total: 400,
-      },
-    ],
-    currency: "USD",
-    language: "English",
-    taxDetails: {
-      amount: 15,
-      amountType: "percentage",
-      taxID: "987654321",
-    },
-    discountDetails: {
-      amount: 5,
-      amountType: "percentage",
-    },
-    shippingDetails: {
-      cost: 5,
-      costType: "percentage",
-    },
-    paymentInformation: {
-      paymentType: "bank" as const,
-      bankName: "Bank Inc.",
-      accountName: "John Doe",
-      accountNumber: "445566998877",
-      network: "Ethereum",
-      walletAddress: "0x1234567890abcdef1234567890abcdef12345678",
-      asset: "USDC",
-    },
-    additionalNotes: "Thank you for your business",
-    paymentTerms: "Net 30",
-    signature: {
-      data: "",
-    },
-    subTotal: "850",
-    totalAmount: "850",
-    totalAmountInWords: "Eight Hundred Fifty",
-    pdfTemplate: 1,
   },
 };

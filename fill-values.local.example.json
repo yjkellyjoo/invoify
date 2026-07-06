@@ -1,0 +1,53 @@
+{
+  "sender": {
+    "name": "John Doe",
+    "address": "123 Main St",
+    "zipCode": "12345",
+    "city": "Anytown",
+    "country": "USA",
+    "email": "johndoe@example.com",
+    "customInputs": [{ "key": "Tax ID", "value": "000-00-00000" }]
+  },
+  "receiver": {
+    "name": "Jane Smith",
+    "address": "456 Elm St",
+    "zipCode": "54321",
+    "city": "Other Town",
+    "country": "Canada",
+    "email": "janesmith@example.com"
+  },
+  "details": {
+    "invoiceLogo": "",
+    "invoiceNumber": "INV-0001",
+    "items": [
+      {
+        "name": "Product 1",
+        "description": "Description of Product 1",
+        "quantity": 4,
+        "unitPrice": 50,
+        "total": 200
+      }
+    ],
+    "currency": "USD",
+    "language": "English",
+    "taxDetails": { "amount": 0, "amountType": "amount", "taxID": "" },
+    "discountDetails": { "amount": 0, "amountType": "amount" },
+    "shippingDetails": { "cost": 0, "costType": "amount" },
+    "paymentInformation": {
+      "paymentType": "bank",
+      "bankName": "Bank Inc.",
+      "accountName": "John Doe",
+      "accountNumber": "445566998877",
+      "network": "",
+      "walletAddress": "",
+      "asset": ""
+    },
+    "additionalNotes": "Thank you for your business",
+    "paymentTerms": "Net 30",
+    "signature": { "data": "" },
+    "subTotal": "200",
+    "totalAmount": "200",
+    "totalAmountInWords": "Two Hundred",
+    "pdfTemplate": 1
+  }
+}
