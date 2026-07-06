@@ -29,6 +29,9 @@
       }
     ],
     "currency": "USD",
+    "exchangeEnabled": true,
+    "exchangeRate": 0.92,
+    "targetCurrency": "EUR",
     "language": "English",
     "taxDetails": { "amount": 0, "amountType": "amount", "taxID": "" },
     "discountDetails": { "amount": 0, "amountType": "amount" },

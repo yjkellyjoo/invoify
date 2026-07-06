@@ -77,6 +77,10 @@
                 "shipping": "Frakt",
                 "subTotal": "Delsum",
                 "totalAmount": "Totalbeløp",
+                "exchangeRate": "Currency exchange",
+                "exchangeRateValue": "Exchange rate",
+                "convertTo": "Convert to",
+                "convertedTotal": "Converted total",
                 "includeTotalInWords": "Inkluder totalbeløp med ord?",
                 "yes": "Ja",
                 "no": "Nei"

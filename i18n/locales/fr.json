@@ -77,6 +77,10 @@
                 "shipping": "Expédition",
                 "subTotal": "Sous-total",
                 "totalAmount": "Montant total",
+                "exchangeRate": "Currency exchange",
+                "exchangeRateValue": "Exchange rate",
+                "convertTo": "Convert to",
+                "convertedTotal": "Converted total",
                 "includeTotalInWords": "Inclure le total en mots?",
                 "yes": "Oui",
                 "no": "Non"

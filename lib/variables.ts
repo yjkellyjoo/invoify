@@ -155,6 +155,9 @@ export const FORM_DEFAULT_VALUES = {
       },
     ],
     currency: "USD",
+    exchangeEnabled: false,
+    exchangeRate: 0,
+    targetCurrency: "",
     language: "English",
     taxDetails: {
       amount: 0,

@@ -1,14 +1,14 @@
 "use client";
 
 // RHF
-import { useFormContext } from "react-hook-form";
+import { useFormContext, useWatch } from "react-hook-form";
 
 // ShadCn
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 
 // Components
-import { ChargeInput } from "@/app/components";
+import { ChargeInput, CurrencySelector, FormInput } from "@/app/components";
 
 // Contexts
 import { useChargesContext } from "@/contexts/ChargesContext";
@@ -22,10 +22,24 @@ import { InvoiceType } from "@/types";
 
 const Charges = () => {
     const {
+        control,
+        setValue,
         formState: { errors },
     } = useFormContext<InvoiceType>();
 
     const { _t } = useTranslationContext();
+
+    // Currency exchange (opt-in). `exchangeEnabled` is a persisted form field so
+    // that the live preview, the generated PDF, and the saved draft all agree.
+    const exchangeEnabled = useWatch({
+        name: "details.exchangeEnabled",
+        control,
+    });
+    const exchangeRate = useWatch({ name: "details.exchangeRate", control });
+    const targetCurrency = useWatch({
+        name: "details.targetCurrency",
+        control,
+    });
 
     const {
         discountSwitch,
@@ -178,6 +192,53 @@ const Charges = () => {
                             }}
                         />
                     </div>
+
+                    <div className="flex justify-between items-center">
+                        <p>{_t("form.steps.summary.exchangeRate")}</p>
+                        <Switch
+                            checked={!!exchangeEnabled}
+                            onCheckedChange={(value) => {
+                                setValue("details.exchangeEnabled", value);
+                            }}
+                        />
+                    </div>
+
+                    {exchangeEnabled && (
+                        <div className="flex flex-col gap-3">
+                            <FormInput
+                                name="details.exchangeRate"
+                                type="number"
+                                vertical
+                                label={_t(
+                                    "form.steps.summary.exchangeRateValue"
+                                )}
+                                placeholder="0.00"
+                            />
+
+                            <CurrencySelector
+                                name="details.targetCurrency"
+                                label={_t("form.steps.summary.convertTo")}
+                                placeholder="Select Currency"
+                            />
+
+                            {Number(exchangeRate) > 0 && targetCurrency && (
+                                <div className="flex justify-between items-center">
+                                    <div>
+                                        {_t(
+                                            "form.steps.summary.convertedTotal"
+                                        )}
+                                    </div>
+                                    <div>
+                                        ≈{" "}
+                                        {formatNumberWithCommas(
+                                            totalAmount * Number(exchangeRate)
+                                        )}{" "}
+                                        {targetCurrency}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
         </>

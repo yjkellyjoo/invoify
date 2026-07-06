@@ -77,6 +77,10 @@
                 "shipping": "送料",
                 "subTotal": "小計",
                 "totalAmount": "合計金額",
+                "exchangeRate": "Currency exchange",
+                "exchangeRateValue": "Exchange rate",
+                "convertTo": "Convert to",
+                "convertedTotal": "Converted total",
                 "includeTotalInWords": "合計金額を文字で表示しますか？",
                 "yes": "はい",
                 "no": "いいえ"

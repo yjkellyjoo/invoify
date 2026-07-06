@@ -77,6 +77,10 @@
         "shipping": "الشحن",
         "subTotal": "الإجمالي الجزئي",
         "totalAmount": "المبلغ الإجمالي",
+        "exchangeRate": "Currency exchange",
+        "exchangeRateValue": "Exchange rate",
+        "convertTo": "Convert to",
+        "convertedTotal": "Converted total",
         "includeTotalInWords": "تضمين الإجمالي بالكلمات؟",
         "yes": "نعم",
         "no": "لا"

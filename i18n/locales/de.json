@@ -77,6 +77,10 @@
                 "shipping": "Versand",
                 "subTotal": "Zwischensumme",
                 "totalAmount": "Gesamtbetrag",
+                "exchangeRate": "Currency exchange",
+                "exchangeRateValue": "Exchange rate",
+                "convertTo": "Convert to",
+                "convertedTotal": "Converted total",
                 "includeTotalInWords": "In Worten",
                 "yes": "Ja",
                 "no": "Nein"

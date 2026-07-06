@@ -77,6 +77,10 @@
                 "shipping": "运费",
                 "subTotal": "小计",
                 "totalAmount": "总金额",
+                "exchangeRate": "Currency exchange",
+                "exchangeRateValue": "Exchange rate",
+                "convertTo": "Convert to",
+                "convertedTotal": "Converted total",
                 "includeTotalInWords": "用文字显示总金额？",
                 "yes": "是",
                 "no": "否"

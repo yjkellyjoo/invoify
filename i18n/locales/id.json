@@ -77,6 +77,10 @@
         "shipping": "Biaya Kirim",
         "subTotal": "Subtotal",
         "totalAmount": "Total Pembayaran",
+        "exchangeRate": "Currency exchange",
+        "exchangeRateValue": "Exchange rate",
+        "convertTo": "Convert to",
+        "convertedTotal": "Converted total",
         "includeTotalInWords": "Sertakan Total dalam Kata-kata?",
         "yes": "Ya",
         "no": "Tidak"

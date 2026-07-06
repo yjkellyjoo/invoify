@@ -77,6 +77,10 @@
                 "shipping": "Koszt dostawy",
                 "subTotal": "Suma częściowa",
                 "totalAmount": "Kwota całkowita",
+                "exchangeRate": "Currency exchange",
+                "exchangeRateValue": "Exchange rate",
+                "convertTo": "Convert to",
+                "convertedTotal": "Converted total",
                 "includeTotalInWords": "Uwzględnić kwotę słownie?",
                 "yes": "Tak",
                 "no": "Nie"

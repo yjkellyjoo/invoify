@@ -77,6 +77,10 @@
         "shipping": "Kargo",
         "subTotal": "Ara Toplam",
         "totalAmount": "Toplam Tutar",
+        "exchangeRate": "Currency exchange",
+        "exchangeRateValue": "Exchange rate",
+        "convertTo": "Convert to",
+        "convertedTotal": "Converted total",
         "includeTotalInWords": "Toplam Tutarı Yazıyla Ekle?",
         "yes": "Evet",
         "no": "Hayır"

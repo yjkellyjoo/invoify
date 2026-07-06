@@ -77,6 +77,10 @@
                 "shipping": "Dostava",
                 "subTotal": "Međuzbir",
                 "totalAmount": "Ukupan iznos",
+                "exchangeRate": "Currency exchange",
+                "exchangeRateValue": "Exchange rate",
+                "convertTo": "Convert to",
+                "convertedTotal": "Converted total",
                 "includeTotalInWords": "Uključiti ukupan iznos rečima?",
                 "yes": "Da",
                 "no": "Ne"

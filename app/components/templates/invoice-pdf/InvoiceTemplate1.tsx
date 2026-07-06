@@ -172,6 +172,24 @@ const InvoiceTemplate = (data: InvoiceType) => {
 								{formatNumberWithCommas(Number(details.totalAmount))} {details.currency}
 							</dd>
 						</dl>
+						{details.exchangeEnabled &&
+						Number(details.exchangeRate) > 0 &&
+						details.targetCurrency ? (
+							<>
+								<dl className='grid sm:grid-cols-5 gap-x-3'>
+									<dt className='col-span-3 font-semibold text-gray-800'>Exchange rate:</dt>
+									<dd className='col-span-2 text-gray-500'>
+										1 {details.currency} = {details.exchangeRate} {details.targetCurrency}
+									</dd>
+								</dl>
+								<dl className='grid sm:grid-cols-5 gap-x-3'>
+									<dt className='col-span-3 font-semibold text-gray-800'>Converted total:</dt>
+									<dd className='col-span-2 text-gray-500'>
+										≈ {formatNumberWithCommas(Number(details.totalAmount) * Number(details.exchangeRate))} {details.targetCurrency}
+									</dd>
+								</dl>
+							</>
+						) : null}
 						{details.totalAmountInWords && (
 							<dl className='grid sm:grid-cols-5 gap-x-3'>
 								<dt className='col-span-3 font-semibold text-gray-800'>Total in words:</dt>

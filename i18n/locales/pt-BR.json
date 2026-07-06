@@ -84,6 +84,10 @@
                 "shipping": "Frete",
                 "subTotal": "Subtotal",
                 "totalAmount": "Valor Total",
+                "exchangeRate": "Currency exchange",
+                "exchangeRateValue": "Exchange rate",
+                "convertTo": "Convert to",
+                "convertedTotal": "Converted total",
                 "includeTotalInWords": "Incluir Total por Extenso?",
                 "yes": "Sim",
                 "no": "Não"

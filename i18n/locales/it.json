@@ -77,6 +77,10 @@
                 "shipping": "Spedizione",
                 "subTotal": "Imponibile",
                 "totalAmount": "Importo totale",
+                "exchangeRate": "Currency exchange",
+                "exchangeRateValue": "Exchange rate",
+                "convertTo": "Convert to",
+                "convertedTotal": "Converted total",
                 "includeTotalInWords": "Includere il totale in parole?",
                 "yes": "Si",
                 "no": "No"
