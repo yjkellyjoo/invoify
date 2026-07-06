@@ -90,6 +90,18 @@ Follow these instructions to get Invoify up and running on your local machine.
     npm run dev
     ```
 5. Open your web browser and access the application at [http://localhost:3000](http://localhost:3000)
+
+### Customizing the dev autofill (optional)
+
+In development, the navbar shows a **DEV** panel with a **"Fill in the form"** button that populates the invoice form with sample data. The default sample lives in the committed `fill-values.local.example.json`.
+
+To make the button fill in *your own* recurring invoice details (sender, client, line items, payment info, etc.), copy the example and edit it:
+
+```bash
+cp fill-values.local.example.json fill-values.local.json
+```
+
+`fill-values.local.json` is gitignored, so your personal data never gets committed. If the file is absent, the example is used automatically — no setup is required. The invoice/due dates are set to the current date at runtime, so leave them out of the JSON. Restart the dev server after creating the file (`next.config.js` reads it at startup).
 <!-- LICENSE -->
 ## License
 

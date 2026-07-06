@@ -58,6 +58,7 @@ Uses `next-intl` with locale-prefixed routing. Routes live under `app/[locale]/`
 ### Key files
 
 - `lib/variables.ts` — central constants: API endpoint paths, `LOCALES`, `FORM_DEFAULT_VALUES`, `FORM_FILL_VALUES` (dev autofill), signature colors/fonts, localStorage keys, the Tailwind CDN URL used by the PDF renderer.
+  - `FORM_FILL_VALUES` (the dev "Fill in the form" button in `app/components/dev/DevDebug.tsx`) builds its content from the `@fill-values` import plus runtime `invoiceDate`/`dueDate`. `next.config.js` aliases `@fill-values` to `fill-values.local.json` (gitignored personal data) when it exists, otherwise the committed `fill-values.local.example.json`. To change the sample content, edit the JSON — not the TS. Since `next.config.js` resolves the alias at startup, restart `npm run dev` after adding/removing the local file.
 - `lib/helpers.ts` — number/price formatting, `formatPriceToString` (number-to-words), `flattenObject` (used for XLSX export), `getInvoiceTemplate`.
 - `lib/schemas.ts` — Zod schemas; edit here to change invoice fields.
 - The `@/*` path alias maps to the repo root (`tsconfig.json`).
